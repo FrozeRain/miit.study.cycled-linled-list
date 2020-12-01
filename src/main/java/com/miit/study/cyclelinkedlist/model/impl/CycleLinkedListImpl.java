@@ -57,14 +57,16 @@ public class CycleLinkedListImpl<Value> implements CycleLinkedList<Value> {
             return this.last;
         }
         if (this.size / 2 > index) {
-            for (CycleNode node = this.first.next; node != this.first; node = node.next, index--) {
+            for (CycleNode node = this.first.next; node != this.first; node = node.next) {
+                index--;
                 if (index == 0) {
                     return node;
                 }
             }
         } else {
             index = this.size - index - 1;
-            for (CycleNode node = this.last.prev; node != this.last; node = node.prev, index--) {
+            for (CycleNode node = this.last.prev; node != this.last; node = node.prev) {
+                index--;
                 if (index == 0) {
                     return node;
                 }
