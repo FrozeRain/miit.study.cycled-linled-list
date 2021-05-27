@@ -56,16 +56,20 @@ public class Main {
     }
 
     private static void printAll(CycleLinkedList<String> model) {
-        System.out.println("> Cycle Linked List: " + model.toString());
+        StringBuilder sb = new StringBuilder();
+        System.out.println(sb.append("> Cycle Linked List: ").append(model.toString()));
     }
 
     private static void printMessage(String msg) {
-        System.out.println("> " + msg);
+        StringBuilder sb = new StringBuilder();
+        System.out.println(sb.append("> ").append(msg));
     }
 
     private static void test(CycleLinkedList<String> model, String value) {
-        System.out.println("> Is contains \""+ value + "\": " + model.contains(value) +
-                "\n> Collection size: " + model.size() +
-                "\n> Collection is Empty: " + model.isEmpty());
+        StringBuilder sb = new StringBuilder();
+        System.out.println(sb
+                        .append("> Is contains \"").append(value).append("\": ").append(model.contains(value))
+                        .append("\n> Collection size: ").append(model.size())
+                        .append("\n> Collection is Empty: ").append(model.isEmpty()));
     }
 }
